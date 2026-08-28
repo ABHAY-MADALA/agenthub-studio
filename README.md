@@ -12,10 +12,6 @@ production scale - see [Current limitations](#current-limitations) and
 [docs/architecture.md](docs/architecture.md) for what's deliberately
 simplified and how it would grow up.
 
-> This project reuses and generalizes the SQL agent from
-> `SQL_LANGGRAPH_PROJECT` (multi-database aware, same validation/repair
-> logic) and adds a Database Builder, a chat-platform UI, and MCP tool
-> placeholders around it. The original project is untouched.
 
 ## What it does
 
@@ -72,7 +68,7 @@ Platform:
 ## Installation
 
 ```bash
-cd AI_WORKSPACE_PLATFORM
+cd agenthub-studio
 python3 -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -130,7 +126,7 @@ For local development with auto-reload, run `uvicorn app:app --reload
 ## Project structure
 
 ```text
-AI_WORKSPACE_PLATFORM/
+agenthub-studio/
 ├── app.py                       FastAPI backend - modes, panels, wiring
 ├── static/                      Frontend (HTML/CSS/JS) served by app.py
 ├── orchestrator.py              Agentic Auto router across agents and tools
